@@ -1,0 +1,85 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    &__inner {
+        display: grid;
+        align-items: center;
+        grid-template-areas: "logo nav btn";
+        grid-template-columns: auto 1fr auto;
+        padding: 20px 0;
+        width: 100%;
+        
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+    &__nav {
+        grid-area: nav;
+    }
+    &__button {
+        grid-area: btn;
+    }
+
+    &__nav {
+        margin-right: 50px;
+        justify-self: end;
+        height: 100%;
+    }
+
+    &__nav-list {
+        display: flex;
+        height: 100%;
+    }
+
+    &__nav-list-item {
+        display: inline-block;
+        height: 100%;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
+    &__nav-link {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+
+        text-transform: capitalize;
+
+        @include Montserrat(16px, 600, #fff);
+
+        transition: color .2s ease-in-out;
+
+        &:hover {
+            color: #313EF7;
+        }
+    }
+
+    &__nav-link_active {
+        position: relative;
+
+        color: #313EF7;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+
+            transform: translateX(-50%);
+
+            display: block;
+            width: 110%;
+            height: 2px;
+
+            background-color: #313EF7;
+        }
+    }
+}

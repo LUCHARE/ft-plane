@@ -1,9 +1,32 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    
+html,
+body {
+    background-color: #fff,
 }
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+
+}
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+}
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Rubik&display=swap);
+
+@import "utils", "components", "header", "footer", "home";

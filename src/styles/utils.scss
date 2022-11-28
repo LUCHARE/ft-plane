@@ -1,0 +1,14 @@
+@mixin Font($family, $generic, $size,$weight,$color) {
+    font-family: $family, $generic;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin Montserrat($size,$weight,$color) {
+    @include Font(Montserrat, sans-serif, $size, $weight, $color)
+}
+
+@mixin Inter($size,$weight,$color) {
+    @include Font(Inter, sans-serif, $size, $weight, $color)
+}

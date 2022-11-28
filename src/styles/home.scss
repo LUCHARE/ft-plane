@@ -1,0 +1,38 @@
+.hero {
+    min-height: 75vh;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(18, 20, 78, 0.9) 0%, #010223 100%);
+
+    &__inner {
+        padding: 128px 0;
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+
+        @include Montserrat(48px, 700, #fff);
+        line-height: 150%;
+        text-align: center;
+    }
+
+    &__text {
+        @include Inter(12px, 400, rgba(#fff, 0.7));
+        text-align: center;
+    }
+
+    &__illustration {
+
+    }
+
+    &__illustration-image {
+        width: 100%;
+    }
+
+    &__main {
+
+    }
+
+    &__book {
+
+    }
+}

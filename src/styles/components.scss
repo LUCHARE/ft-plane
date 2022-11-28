@@ -1,0 +1,52 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        margin-right: 8px;
+    }
+
+    &__text {
+        @include Montserrat(22px, 800, #fff);
+    }
+}
+
+.button {
+    display: inline-block;
+
+    text-transform: capitalize;
+
+    @include Montserrat(16px, 600, #fff);
+    
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    &_outlined {
+        border: 1px solid #ffffff;
+        border-radius: 59px;
+    }
+
+    &_bluefield {
+        background: #313ef7;
+        box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+        border-radius: 56px;
+    }
+
+    &_size_m {
+        padding: 16px 40px;
+    }
+
+    &_size_l {
+        padding: 20px 45px;
+    }
+}
+
+.heading {
+    &_size_l {
+        @include Montserrat(40px, 700, #030522);
+        line-height: 150%;
+    }
+}
