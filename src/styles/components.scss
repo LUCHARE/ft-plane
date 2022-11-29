@@ -103,6 +103,7 @@
 
     &__header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 24px;
     }
@@ -131,5 +132,21 @@
     }
     &__boeing {
         margin-right: 8px;
+    }
+
+    &__barcode {
+        width: 100%;
+    }
+}
+
+.rating {
+    display: flex;
+
+    &__star {
+        display: block;
+        width: 14px;
+        height: 14px;
+
+        background: url(./../images/icons/star.svg) no-repeat center/contain;
     }
 }

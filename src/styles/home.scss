@@ -1,7 +1,11 @@
 .hero {
     min-height: 75vh;
 
-    background: radial-gradient(50% 50% at 50% 50%, rgba(18, 20, 78, 0.9) 0%, #010223 100%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(18, 20, 78, 0.9) 0%,
+        #010223 100%
+    );
 
     &__inner {
         padding: 128px 0;
@@ -32,7 +36,6 @@
 
         transform: translateX(-50%);
         z-index: 1;
-
     }
 
     &__illustration-jet {
@@ -42,9 +45,11 @@
         width: 100%;
     }
 
-    &__main {}
+    &__main {
+    }
 
-    &__book {}
+    &__book {
+    }
 
     &__background {
         position: absolute;
@@ -55,7 +60,6 @@
         transform: translateX(-50%);
     }
 }
-
 
 .features {
     padding: 100px 0;
@@ -149,7 +153,7 @@
     &__heading {
         margin-bottom: 16px;
 
-        @include Montserrat(20px, 900, #313EF7);
+        @include Montserrat(20px, 900, #313ef7);
         line-height: 24px;
     }
 
@@ -182,7 +186,7 @@
             width: 10px;
             height: 10px;
 
-            background-color: #313EF7;
+            background-color: #313ef7;
             border-radius: 50%;
         }
     }
@@ -203,9 +207,10 @@
     &__inner {
         display: grid;
         justify-content: space-between;
-        grid-template-areas: "heading slider"
-            "text slider"
-            "illustration slider";
+        grid-template-areas:
+            "heading       slider"
+            "text          slider"
+            "illustration  slider";
         grid-template-columns: auto auto;
     }
 
@@ -242,30 +247,321 @@
         line-height: 150%;
     }
 
-    &__ticket {}
+    &__ticket.swiper-slide {
+        opacity: 0.1;
+    }
 
-    &__card-slider-next, &__card-slider-prev {
+    &__ticket.swiper-slide-visible {
+        opacity: 1;
+    }
+
+    &__card-slider {
+        display: flex;
+
+        width: 440px;
+    }
+
+    &__card-slider-next,
+    &__card-slider-prev {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         width: 40px;
         height: 40px;
-        
+
         border-radius: 50%;
 
         cursor: pointer;
     }
 
-    &__card-slider-next {
-        background-color: #313EF7;
-    }
-
-    &__card-slider-prev {
-        background-color: rgba(255, 255, 255, 0.1);;
+    &__card-slider-controls {
+        display: grid;
+        grid-template-areas:
+            "pagination"
+            "spacing"
+            "prev"
+            "next";
+        grid-template-rows: auto 1fr auto auto;
+        margin-left: 84px;
     }
 
     &__card-slider-pagination {
-        
+        grid-area: pagination;
+    }
+
+    &__card-slider-pagination-bullet,
+    &__card-slider-pagination-bullet-active {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &__card-slider-pagination-bullet {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__card-slider-pagination-bullet-active {
+        background-color: #fff;
+    }
+
+    &__card-slider-pagination {
+        display: grid;
+        gap: 8px;
+    }
+
+    &__card-slider-next {
+        grid-area: next;
+    }
+    &__card-slider-prev {
+        grid-area: prev;
+    }
+
+    &__card-slider-next {
+        background-color: #313ef7;
+        box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+    }
+
+    &__card-slider-prev {
+        margin-bottom: 11px;
+
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
 
+.best-travelers {
+    padding: 100px 0;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+    }
+
+    &__card {
+        display: grid;
+        justify-items: center;
+        width: 280px;
+        padding: 0 0 40px 0;
+        overflow: hidden;
+
+        background: #ffffff;
+        box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.05);
+        border-radius: 200px;
+    }
+
+    &__card-bg {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    &__card-avatar {
+        margin-top: -20px;
+        margin-bottom: 8px;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+    }
+
+    &__card-name {
+        margin-bottom: 4px;
+
+        @include Montserrat(24px, 600, #011736);
+        line-height: 150%;
+    }
+
+    &__card-username {
+        @include Montserrat(16px, 600, #aeb5bf);
+        line-height: 150%;
+    }
+}
+
+.feedback {
+    &__inner {
+        display: grid;
+        grid-template-areas:
+            "description   description"
+            "heading       heading"
+            "illustration  slider";
+        column-gap: 21px;
+    }
+
+    &__heading {
+        grid-area: heading;
+        text-align: center;
+    }
+
+    &__description {
+        grid-area: description;
+        margin-bottom: 8px;
+
+        @include Montserrat(20px, 600, #313ef7);
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &__illustration {
+        grid-area: illustration;
+    }
+
+    &__slider {
+        grid-area: slider;
+    }
+
+    &__slider-next,
+    &__slider-prev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    &__slider-next {
+        background: #313ef7;
+        box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+    }
+
+    &__slider-prev {
+        background: rgba(49, 62, 247, 0.1);
+    }
+
+    &__card {
+        padding: 30px 21px;
+        background: #ffffff;
+        box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        border-radius: 20px;
+    }
+
+    &__card-text {
+        @include Montserrat(18px, 500, #1b1b1c);
+        font-style: italic;
+    }
+
+    &__card-user {
+        display: grid;
+        grid-template-areas:
+            "avatar name"
+            "avatar rate";
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 16px;
+    }
+
+    &__card-user-name {
+        grid-area: name;
+        align-self: end;
+
+        margin-bottom: 8px;
+
+        @include Montserrat(20px, 600, #011736);
+        line-height: 24px;
+    }
+
+    &__card-user-avatar {
+        grid-area: avatar;
+
+        margin-right: 16px;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+    }
+
+    &__card-user-rate {
+        grid-area: rate;
+        align-self: start;
+    }
+}
+
+.make-memories {
+    padding: 100px 0;
+
+    &__heading {
+        margin-bottom: 40px;
+
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    &__list-item {
+        &:nth-child(even) {
+            margin-top: 50px;
+        }
+    }
+
+    &__card {
+        display: block;
+        width: 270px;
+        height: 390px;
+        overflow: hidden;
+        background: var(--bg) no-repeat center/cover border-box;
+        border: 10px solid rgba(#fff, 0.3);
+        border-radius: 200px;
+    }
+}
+
+.subscribe {
+    padding: 100px 0;
+
+    background-color: rgba(49, 62, 247, 0.05);
+
+    &__inner {
+        display: grid;
+        justify-content: center;
+    }
+
+    &__heading {
+        max-width: 530px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__form {
+        justify-self: center;
+
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        background: #ffffff;
+        box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        border-radius: 150px;
+    }
+
+    &__form-input {
+        width: 320px;
+        margin-left: 10px;
+
+        outline: none;
+
+        @include Rubik(20px, 400, #404041);
+
+        &::placeholder {
+            @include Rubik(20px, 400, #aeb5bf);
+            line-height: 24px;
+        }
+    }
+
+    &__form-submit {
+    }
+}

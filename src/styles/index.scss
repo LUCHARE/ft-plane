@@ -6,8 +6,11 @@ a {
 
 button {
     border: none;
-    outline: none;
     background: none;
+}
+
+input {
+    border:none;
 }
 
 *,
@@ -35,6 +38,6 @@ body {
     max-width: 1280px;
 }
 
-@import url(https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Rubik&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;600;700;800;900&family=Rubik&display=swap);
 
 @import "utils", "components", "header", "footer", "home";

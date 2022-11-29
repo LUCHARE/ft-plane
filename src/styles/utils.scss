@@ -6,9 +6,13 @@
 }
 
 @mixin Montserrat($size,$weight,$color) {
-    @include Font(Montserrat, sans-serif, $size, $weight, $color)
+    @include Font(Montserrat, sans-serif, $size, $weight, $color);
 }
 
 @mixin Inter($size,$weight,$color) {
-    @include Font(Inter, sans-serif, $size, $weight, $color)
+    @include Font(Inter, sans-serif, $size, $weight, $color);
+}
+
+@mixin Rubik($size,$weight,$color) {
+    @include Font(Rubik, sans-serif, $size, $weight, $color);
 }

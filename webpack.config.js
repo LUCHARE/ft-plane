@@ -10,35 +10,37 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "main.js",
-        path: path.resolve(__dirname, "public/")
+        path: path.resolve(__dirname, "public/"),
     },
-    
+
     devServer: {
-        static: "./public"
+        static: "./public",
     },
 
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
-                use: [CSSExtractPlugin.loader, 'css-loader', 'sass-loader']
-            }
-        ]
+                use: [
+                    CSSExtractPlugin.loader,
+                    { loader: "css-loader", options: { url: false } },
+                    "sass-loader",
+                ],
+            },
+        ],
     },
 
     performance: {
         hints: false,
-    }, 
+    },
 
     plugins: [
         new CopyPlugin({
-            patterns: [
-                {from: "./src/images", to: "images"}
-            ]
+            patterns: [{ from: "./src/images", to: "images" }],
         }),
-        new HtmlPlugin({ 
+        new HtmlPlugin({
             template: "./src/index.html",
         }),
         new CSSExtractPlugin(),
-    ]
-}
+    ],
+};
