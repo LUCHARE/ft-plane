@@ -17,7 +17,7 @@
     text-transform: capitalize;
 
     @include Montserrat(16px, 600, #fff);
-    
+
     transition: transform 0.2s ease-in-out;
 
     &:hover {
@@ -48,5 +48,88 @@
     &_size_l {
         @include Montserrat(40px, 700, #030522);
         line-height: 150%;
+    }
+}
+
+
+.ticket {
+    display: grid;
+    grid-template-areas: "header   header"
+        "count    count"
+        "data     data"
+        "spacing  spacing"
+        "barcode  barcode";
+    grid-template-rows: auto auto auto 85px auto;
+    padding: 30px;
+
+    background: url(../images/blank-ticket.svg) no-repeat center/contain;
+    border-radius: 30px;
+
+    @include Montserrat(16px, 600, #030522);
+    line-height: 150%;
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__data {
+        grid-area: data;
+    }
+
+    &__barcode {
+        grid-area: barcode;
+    }
+
+    &__data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+    }
+
+    &__data-item {
+        display: grid;
+    }
+
+    &__count {
+        grid-area: count;
+    }
+
+    &__data-label {
+        margin-bottom: 5px;
+
+        @include Montserrat(14px, 500, #9CA3AF);
+        line-height: 150%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__count {
+        margin-bottom: 24px;
+    }
+
+    &__class-label {
+        display: inline-block;
+        padding: 10px;
+
+        @include Montserrat(16px, 500, #313EF7);
+        line-height: 20px;
+
+        background: rgba(49, 62, 247, 0.1);
+        border-radius: 49px;
+    }
+
+    &__fromto {
+        display: flex;
+        align-items: center;
+    }
+    &__from {
+        margin-right: 8px;
+    }
+    &__boeing {
+        margin-right: 8px;
     }
 }

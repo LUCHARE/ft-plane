@@ -1,3 +1,15 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
 *,
 *::before,
 *::after {
@@ -8,15 +20,12 @@
 
 html,
 body {
-    background-color: #fff,
-}
-
-a {
-    text-decoration: none;
+    background-color: #F5F5F5,
 }
 
 .wrapper {
-
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -26,7 +35,6 @@ a {
     max-width: 1280px;
 }
 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 @import url(https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Rubik&display=swap);
 
 @import "utils", "components", "header", "footer", "home";

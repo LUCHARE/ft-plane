@@ -21,18 +21,251 @@
     }
 
     &__illustration {
+        position: relative;
+        z-index: 2;
+    }
 
+    &__illustration-text {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+
+        transform: translateX(-50%);
+        z-index: 1;
+
+    }
+
+    &__illustration-jet {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+    }
+
+    &__main {}
+
+    &__book {}
+
+    &__background {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 100px;
+
+        transform: translateX(-50%);
+    }
+}
+
+
+.features {
+    padding: 100px 0;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    &__list-item:nth-child(even) {
+        margin-top: 30px;
+    }
+
+    &__card {
+        display: grid;
+        justify-items: center;
+        padding: 28px 21px;
+
+        background-color: #fff;
+        box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        border-radius: 185px;
+    }
+
+    &__card-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 32px;
+        width: 70px;
+        height: 70px;
+
+        background: rgba(49, 62, 247, 0.05);
+        border-radius: 50%;
+    }
+
+    &__card-icon-image {
+        width: 40px;
+        object-fit: contain;
+    }
+
+    &__card-title {
+        margin-bottom: 10px;
+
+        @include Montserrat(24px, 800, #030522);
+        line-height: 150%;
+    }
+
+    &__card-text {
+        margin-bottom: 32px;
+        max-width: 240px;
+
+        @include Montserrat(16px, 400, rgba(3, 5, 34, 0.65));
+        line-height: 150%;
+        text-align: center;
+    }
+
+    &__card-button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+
+        background: #030522;
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+}
+
+.lets-fly {
+    &__inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    &__main {
+        max-width: 590px;
+        justify-self: end;
     }
 
     &__illustration-image {
         width: 100%;
+        max-width: 560px;
     }
 
-    &__main {
+    &__heading {
+        margin-bottom: 16px;
 
+        @include Montserrat(20px, 900, #313EF7);
+        line-height: 24px;
     }
 
-    &__book {
+    &__big-text {
+        margin-bottom: 40px;
 
+        @include Montserrat(32px, 700, #030303);
+        line-height: 45px;
+    }
+
+    &__list {
+        margin-bottom: 40px;
+    }
+
+    &__list-item {
+        position: relative;
+        padding-left: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 3px;
+
+            width: 10px;
+            height: 10px;
+
+            background-color: #313EF7;
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        max-width: 530px;
+
+        @include Montserrat(16px, 500, #030303);
     }
 }
+
+.popular-tickets {
+    padding: 50px 0px;
+    margin-top: 100px;
+
+    background: #010223;
+
+    &__inner {
+        display: grid;
+        justify-content: space-between;
+        grid-template-areas: "heading slider"
+            "text slider"
+            "illustration slider";
+        grid-template-columns: auto auto;
+    }
+
+    &__heading {
+        grid-area: heading;
+    }
+
+    &__text {
+        grid-area: text;
+    }
+
+    &__illustration {
+        grid-area: illustration;
+    }
+
+    &__card-slider {
+        grid-area: slider;
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+        max-width: 500px;
+
+        @include Montserrat(40px, 700, #fff);
+        line-height: 150%;
+        text-transform: capitalize;
+    }
+
+    &__text {
+        margin-bottom: 24px;
+        max-width: 500px;
+
+        @include Montserrat(16px, 400, rgba(255, 255, 255, 0.65));
+        line-height: 150%;
+    }
+
+    &__ticket {}
+
+    &__card-slider-next, &__card-slider-prev {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    &__card-slider-next {
+        background-color: #313EF7;
+    }
+
+    &__card-slider-prev {
+        background-color: rgba(255, 255, 255, 0.1);;
+    }
+
+    &__card-slider-pagination {
+        
+    }
+}
+
