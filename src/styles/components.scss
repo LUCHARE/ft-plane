@@ -51,10 +51,10 @@
     }
 }
 
-
 .ticket {
     display: grid;
-    grid-template-areas: "header   header"
+    grid-template-areas:
+        "header   header"
         "count    count"
         "data     data"
         "spacing  spacing"
@@ -97,7 +97,7 @@
     &__data-label {
         margin-bottom: 5px;
 
-        @include Montserrat(14px, 500, #9CA3AF);
+        @include Montserrat(14px, 500, #9ca3af);
         line-height: 150%;
     }
 
@@ -116,7 +116,7 @@
         display: inline-block;
         padding: 10px;
 
-        @include Montserrat(16px, 500, #313EF7);
+        @include Montserrat(16px, 500, #313ef7);
         line-height: 20px;
 
         background: rgba(49, 62, 247, 0.1);

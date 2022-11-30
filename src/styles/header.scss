@@ -83,4 +83,67 @@
             background-color: #313EF7;
         }
     }
+
+    &__burger {
+        position: relative;
+
+        display: none;
+        width: 20px;
+        height: 20px;
+
+        cursor: pointer;
+    }
+
+    &__burger-top, &__burger-middle, &__burger-bottom {
+        position: absolute;
+        left: 0;
+
+        width: 25px;
+        height: 4px;
+
+        background-color: #fff;
+        border-radius: 3px;
+    }
+
+    &__burger-top {
+        top: 0;
+    }
+
+    &__burger-middle {
+        top: 50%;
+        
+        transform: translateY(-50%);
+    }
+
+    &__burger-bottom {
+        bottom: 0;
+    }
+
+    @media (max-width: 1024px) {
+        &__button {
+            display: none;
+        }
+
+        &__nav-link {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__inner {
+            grid-template-areas: "logo burger";
+            grid-template-columns: auto 1fr;
+        }
+
+        &__burger {
+            grid-area: burger;
+            justify-self: end;
+
+            display: block;
+        }
+
+        &__nav {
+            display: none;
+        }
+    }
 }

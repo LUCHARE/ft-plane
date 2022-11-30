@@ -140,7 +140,7 @@
     
     &__inner {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1.2fr 1fr;
     }
 
     &__main {
@@ -219,31 +219,20 @@
 
     &__inner {
         display: grid;
-        justify-content: space-between;
         grid-template-areas:
-            "heading       slider"
-            "text          slider"
-            "illustration  slider";
-        grid-template-columns: auto auto;
-    }
-
-    &__heading {
-        grid-area: heading;
-    }
-
-    &__text {
-        grid-area: text;
+            "heading       slider   controls"
+            "text          slider   controls"
+            "illustration  slider   controls";
+        grid-template-columns: 1fr auto auto;
     }
 
     &__illustration {
         grid-area: illustration;
     }
 
-    &__card-slider {
-        grid-area: slider;
-    }
-
     &__heading {
+        grid-area: heading;
+
         margin-bottom: 16px;
         max-width: 500px;
 
@@ -253,6 +242,8 @@
     }
 
     &__text {
+        grid-area: text;
+
         margin-bottom: 24px;
         max-width: 500px;
 
@@ -269,9 +260,9 @@
     }
 
     &__card-slider {
-        display: flex;
+        grid-area: slider;
 
-        width: 440px;
+        max-width: 390px
     }
 
     &__card-slider-next,
@@ -288,6 +279,8 @@
     }
 
     &__card-slider-controls {
+        grid-area: controls;
+
         display: grid;
         grid-template-areas:
             "pagination"
@@ -417,6 +410,7 @@
             "description   description"
             "heading       heading"
             "illustration  slider";
+        grid-template-columns: 1.3fr 1fr;
         column-gap: 21px;
     }
 
@@ -439,6 +433,11 @@
         grid-area: illustration;
     }
 
+    &__illustration-image {
+        max-width: 680px;
+        width: 100%;
+    }
+
     &__slider {
         grid-area: slider;
         
@@ -446,13 +445,14 @@
         grid-template-areas: "slider  slider"
                              "prev    next";
         grid-template-columns: 1fr 1fr;
+        padding-bottom: 20px;
         column-gap: 16px;
         row-gap: 32px;
 
         max-width: 500px;
         width: 100%;
         
-        filter: drop-shadow(0px 100px 200px rgba(1, 23, 54, 0.1));
+        // filter: drop-shadow(0px 100px 200px rgba(1, 23, 54, 0.1));
     }
 
     &__slider-wrapper {
@@ -547,8 +547,10 @@
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
     }
 
     &__list-item {
