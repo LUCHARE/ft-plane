@@ -62,15 +62,16 @@
 }
 
 .features {
-    padding: 100px 0;
+    margin: 50px 0;
 
     &__heading {
         text-align: center;
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
         margin-top: 40px;
     }
@@ -135,6 +136,8 @@
 }
 
 .lets-fly {
+    margin: 50px 0;
+    
     &__inner {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -151,10 +154,20 @@
     }
 
     &__heading {
+        display: flex;
+        align-items: center;
         margin-bottom: 16px;
 
         @include Montserrat(20px, 900, #313ef7);
         line-height: 24px;
+    }
+
+    &__heading-line {
+        display: block;
+        width: 100%;
+        margin-left: 12px;
+
+        border-top: 2px dashed #caccce;
     }
 
     &__big-text {
@@ -199,8 +212,8 @@
 }
 
 .popular-tickets {
-    padding: 50px 0px;
-    margin-top: 100px;
+    padding: 50px 0;
+    margin: 50px 0;
 
     background: #010223;
 
@@ -333,7 +346,7 @@
 }
 
 .best-travelers {
-    padding: 100px 0;
+    margin: 50px 0;
 
     &__heading {
         text-align: center;
@@ -341,6 +354,16 @@
     }
 
     &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    &__list-item {
+        &:not(:last-child) {
+            // margin-right: 24px;
+        }
     }
 
     &__card {
@@ -386,6 +409,8 @@
 }
 
 .feedback {
+    margin: 50px 0;
+
     &__inner {
         display: grid;
         grid-template-areas:
@@ -398,6 +423,7 @@
     &__heading {
         grid-area: heading;
         text-align: center;
+        margin-bottom: 60px;
     }
 
     &__description {
@@ -415,6 +441,24 @@
 
     &__slider {
         grid-area: slider;
+        
+        display: grid;
+        grid-template-areas: "slider  slider"
+                             "prev    next";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 32px;
+
+        max-width: 500px;
+        width: 100%;
+        
+        filter: drop-shadow(0px 100px 200px rgba(1, 23, 54, 0.1));
+    }
+
+    &__slider-wrapper {
+        grid-area: slider;
+        // box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        
     }
 
     &__slider-next,
@@ -431,19 +475,23 @@
     }
 
     &__slider-next {
+        grid-area: next;
+        justify-self: start;
         background: #313ef7;
         box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
     }
 
     &__slider-prev {
+        grid-area: prev;
+        justify-self: end;
         background: rgba(49, 62, 247, 0.1);
     }
 
     &__card {
         padding: 30px 21px;
         background: #ffffff;
-        box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
         border-radius: 20px;
+        width: 100%;
     }
 
     &__card-text {
@@ -490,7 +538,7 @@
 }
 
 .make-memories {
-    padding: 100px 0;
+    margin: 50px 0;
 
     &__heading {
         margin-bottom: 40px;
@@ -521,6 +569,7 @@
 }
 
 .subscribe {
+    margin: 50px 0;
     padding: 100px 0;
 
     background-color: rgba(49, 62, 247, 0.05);

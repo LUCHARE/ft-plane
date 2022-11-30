@@ -1,0 +1,101 @@
+.footer {
+    position: relative;
+
+    padding: 100px 0;
+    background-color: #010223;
+
+    &__inner {
+        display: grid;
+        grid-template-areas: "about     sitemap"
+                             "contacts  sitemap";
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-bottom: 40px;
+
+        border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__about {
+        grid-area: about;
+
+        margin-bottom: 24px;
+    }
+
+    &__about-logo {
+        margin-bottom: 24px;
+    }
+
+    &__about-text {
+        max-width: 300px;
+
+        @include Montserrat(16px, 400, #A7A7A7);
+        line-height: 150%;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+    }
+
+    &__contacts-list {
+        display: flex;
+    }
+
+    &__contacts-list-item {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__contact {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+
+        background-color: #FFFFFF;
+        box-shadow: 0px 6px 27px rgba(49, 49, 49, 0.17);
+        border-radius: 50%;
+    }
+
+    &__sitemap {
+        grid-area: sitemap;
+        justify-self: end;
+
+        display: flex;
+        justify-content: space-between;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    &__sitemap-cat-name {
+        margin-bottom: 10px;
+
+        @include Montserrat(24px, 700, #fff);
+        line-height: 150%;
+    }
+
+    &__sitemap-list {}
+
+    &__sitemap-list-item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__sitemap-link {
+        @include Montserrat(16px, 400, #A7A7A7);
+        line-height: 150%;
+    }
+
+    &__copyright {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+
+        transform: translateX(-50%);
+
+        @include Montserrat(14px, 400, #fff);
+        letter-spacing: -2%;
+    }
+}

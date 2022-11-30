@@ -18,3 +18,11 @@ new Swiper(".popular-tickets__card-slider", {
         prevEl: ".popular-tickets__card-slider-prev"
     }
 });
+
+new Swiper(".feedback__slider", {
+    spaceBetween: 32,
+    navigation: {
+        nextEl: ".feedback__slider-next",
+        prevEl: ".feedback__slider-prev"
+    }
+});
