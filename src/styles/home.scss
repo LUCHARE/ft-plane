@@ -1,17 +1,20 @@
 .hero {
-    min-height: 75vh;
+    position: relative;
 
-    background: radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(18, 20, 78, 0.9) 0%,
-        #010223 100%
-    );
+    min-height: 100vh;
+
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(18, 20, 78, 0.9) 0%,
+            #010223 100%);
 
     &__inner {
         padding: 128px 0;
     }
 
     &__heading {
+        position: relative;
+        z-index: 2;
+
         margin-bottom: 16px;
 
         @include Montserrat(48px, 700, #fff);
@@ -34,6 +37,8 @@
         left: 50%;
         top: 25%;
 
+        width: 100%;
+
         transform: translateX(-50%);
         z-index: 1;
     }
@@ -45,11 +50,9 @@
         width: 100%;
     }
 
-    &__main {
-    }
+    &__main {}
 
-    &__book {
-    }
+    &__book {}
 
     &__background {
         position: absolute;
@@ -57,7 +60,27 @@
         left: 50%;
         top: 100px;
 
+        width: 100%;
+
         transform: translateX(-50%);
+    }
+
+    @media (max-width: 1024px) {
+        &__background {
+            width: 200%;
+        }
+    }
+
+    @media (max-width: 425px) {
+        &__heading {
+            font-size: 42px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        &__heading {
+            font-size: 36px;
+        }
     }
 }
 
@@ -137,7 +160,7 @@
 
 .lets-fly {
     margin: 50px 0;
-    
+
     &__inner {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -322,6 +345,7 @@
     &__card-slider-next {
         grid-area: next;
     }
+
     &__card-slider-prev {
         grid-area: prev;
     }
@@ -440,25 +464,25 @@
 
     &__slider {
         grid-area: slider;
-        
+
         display: grid;
         grid-template-areas: "slider  slider"
-                             "prev    next";
+            "prev    next";
         grid-template-columns: 1fr 1fr;
         padding-bottom: 20px;
         column-gap: 16px;
         row-gap: 32px;
 
-        max-width: 500px;
-        width: 100%;
-        
+        // max-width: 500px;
+        // width: 100%;
+
         // filter: drop-shadow(0px 100px 200px rgba(1, 23, 54, 0.1));
     }
 
     &__slider-wrapper {
         grid-area: slider;
         // box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
-        
+
     }
 
     &__slider-next,
@@ -535,6 +559,21 @@
         grid-area: rate;
         align-self: start;
     }
+
+    @media (max-width: 1024px) {
+        &__inner {
+            justify-items: center;
+            grid-template-areas:
+                "description"
+                "heading"
+                "illustration"
+                "slider";
+            grid-template-columns: 1fr;
+        }
+        &__slider {
+            margin-top: 32px;
+        }
+    }
 }
 
 .make-memories {
@@ -585,6 +624,7 @@
         max-width: 530px;
         margin-bottom: 40px;
         text-align: center;
+        width: 100%;
     }
 
     &__form {
@@ -601,6 +641,7 @@
 
     &__form-input {
         width: 320px;
+
         margin-left: 10px;
 
         outline: none;
@@ -613,6 +654,23 @@
         }
     }
 
-    &__form-submit {
+    &__form-submit {}
+
+    @media (max-width: 767px) {
+        &__form {
+            flex-direction: column;
+
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        &__form-input {
+            padding: 20px;
+            margin-bottom: 16px;
+
+            border-radius: 50px;
+            box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        }
     }
 }

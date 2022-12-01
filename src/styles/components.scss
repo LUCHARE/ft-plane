@@ -49,6 +49,18 @@
         @include Montserrat(40px, 700, #030522);
         line-height: 150%;
     }
+
+    @media (max-width: 425px) {
+        &_size_l {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        &_size_l {
+            font-size: 32px;
+        }
+    }
 }
 
 .ticket {

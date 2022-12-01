@@ -64,10 +64,17 @@
         justify-self: end;
 
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         max-width: 700px;
         width: 100%;
         margin-left: 40px;
+    }
+
+    &__sitemap-cat {
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
     }
 
     &__sitemap-cat-name {
@@ -96,7 +103,7 @@
         left: 50%;
         bottom: 50px;
 
-        transform: translateX(-50%);
+        transform: translate(-50%, 50%);
 
         @include Montserrat(14px, 400, #fff);
         letter-spacing: -2%;
@@ -118,6 +125,12 @@
             justify-self: center;
             margin-top: 40px;
             margin-left: 0;
+        }
+    }
+
+    @media (max-width: 425px) {
+        &__sitemap {
+            
         }
     }
 }
