@@ -74,7 +74,7 @@
     grid-template-rows: auto auto auto 85px auto;
     padding: 30px;
 
-    background: url(../images/blank-ticket.svg) no-repeat center/contain;
+    background: url(../images/blank-ticket.svg) no-repeat center/100% 100%;
     border-radius: 30px;
 
     @include Montserrat(16px, 600, #030522);
@@ -148,6 +148,33 @@
 
     &__barcode {
         width: 100%;
+    }
+
+    @media (max-width: 375px) {
+        grid-template-rows: auto auto auto 60px auto;
+        padding: 15px;
+
+        font-size: 14px;
+
+        &__class-label {
+            font-size: 14px;
+        }
+
+        &__data-label {
+            font-size: 12px;
+        }
+        
+        &__header {
+            margin-bottom: 16px;
+        }
+
+        &__count {
+            margin-bottom: 16px;
+        }
+
+        &__barcode {
+            margin-bottom: 5%;
+        }
     }
 }
 

@@ -2,7 +2,9 @@
     position: relative;
 
     padding: 100px 0;
-    background-color: #010223;
+    background: url(./../images/map.svg) no-repeat top 20px center/ auto 130%,#010223;
+
+    
 
     &__inner {
         display: grid;
@@ -125,12 +127,6 @@
             justify-self: center;
             margin-top: 40px;
             margin-left: 0;
-        }
-    }
-
-    @media (max-width: 425px) {
-        &__sitemap {
-            
         }
     }
 }
