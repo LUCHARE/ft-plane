@@ -7,6 +7,8 @@
             rgba(18, 20, 78, 0.9) 0%,
             #010223 100%);
 
+    overflow: hidden;
+
     &__inner {
         padding: 128px 0;
     }
@@ -166,14 +168,18 @@
         grid-template-columns: 1.2fr 1fr;
     }
 
-    &__main {
-        max-width: 590px;
-        justify-self: end;
+    &__illustration {
+        margin-right: 50px;
     }
 
     &__illustration-image {
         width: 100%;
         max-width: 560px;
+    }
+
+    &__main {
+        max-width: 590px;
+        justify-self: end;
     }
 
     &__heading {
@@ -232,6 +238,44 @@
 
         @include Montserrat(16px, 500, #030303);
     }
+
+    @media (max-width: 1024px) {
+        position: relative;
+
+        &__inner {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        &__illustration {
+            margin-right: 0;
+        }
+
+        &__illustration-image {
+            width: 100%;
+            // position: absolute;
+            // left: -10%;
+            // top: 20%;
+
+            // width: 50%;
+
+            // transform: translateX(-50%);
+
+            // margin-right: 0;
+        }
+
+        &__main {
+            justify-self: center;
+
+            display: grid;
+            justify-items: center;
+            margin-top: 40px;
+        }
+
+        &__big-text {
+            text-align: center;
+        }
+    }
 }
 
 .popular-tickets {
@@ -247,6 +291,7 @@
             "text          slider   controls"
             "illustration  slider   controls";
         grid-template-columns: 1fr auto auto;
+        column-gap: 50px;
     }
 
     &__illustration {
@@ -311,7 +356,7 @@
             "prev"
             "next";
         grid-template-rows: auto 1fr auto auto;
-        margin-left: 84px;
+        margin-left: 40px;
     }
 
     &__card-slider-pagination {
@@ -338,7 +383,8 @@
     }
 
     &__card-slider-pagination {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
     }
 
@@ -359,6 +405,53 @@
         margin-bottom: 11px;
 
         background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 1024px) {
+        &__inner {
+            grid-template-areas: "heading"
+                                 "text"
+                                 "illustration"
+                                 "slider"
+                                 "controls";
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            justify-items: center;
+        }
+
+        &__heading, &__text {
+            text-align: center;
+        }
+
+        &__illustration {
+            width: 50%;
+        }
+
+        &__illustration-image {
+            width: 100%;
+        }
+
+        &__card-slider {}
+
+        &__card-slider-controls {
+            grid-template-areas: "pagination spacing prev next";
+            grid-template-columns: auto 1fr auto auto;
+            grid-template-rows: initial;
+            align-items: center;
+            margin-left: 0;
+            margin-top: 32px;
+            max-width: 390px;
+            width: 100%;
+        }
+
+        &__card-slider-pagination {
+            flex-direction: row;
+        }
+
+        &__card-slider-prev {
+            margin-bottom: 0;
+            margin-right: 16px;
+        }
     }
 }
 
@@ -570,6 +663,7 @@
                 "slider";
             grid-template-columns: 1fr;
         }
+
         &__slider {
             margin-top: 32px;
         }
@@ -628,6 +722,9 @@
     }
 
     &__form {
+        max-width: 570px;
+        width: 100%;
+
         justify-self: center;
 
         display: flex;
@@ -640,7 +737,7 @@
     }
 
     &__form-input {
-        width: 320px;
+        width: 100%;
 
         margin-left: 10px;
 
@@ -671,6 +768,19 @@
 
             border-radius: 50px;
             box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+        
+            font-size: 16px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
         }
     }
+
+    @media (max-width: 425px) {
+        &__form {
+        }
+    }
+
+
 }
