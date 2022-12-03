@@ -17,6 +17,15 @@ module.exports = {
         static: "./public",
     },
 
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"],
+        extensionAlias: {
+            ".js": [".js", ".ts"],
+            ".cjs": [".cjs", ".cts"],
+            ".mjs": [".mjs", ".mts"],
+        },
+    },
+
     module: {
         rules: [
             {
@@ -27,6 +36,7 @@ module.exports = {
                     "sass-loader",
                 ],
             },
+            { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
         ],
     },
 
@@ -39,7 +49,7 @@ module.exports = {
             patterns: [{ from: "./src/images", to: "images" }],
         }),
         new HtmlPlugin({
-            template: "./src/index.html",
+            template: "./src/markup/index.html",
         }),
         new CSSExtractPlugin(),
     ],
