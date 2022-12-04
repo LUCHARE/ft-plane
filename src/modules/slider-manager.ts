@@ -11,13 +11,14 @@ class SliderManager {
 
     initPopularTickets(): void {
         this.popularTickets = new Swiper(".popular-tickets__card-slider", {
-            modules: [Navigation, Pagination, EffectCards],
-            effect: "cards",
-            cardsEffect: {
-                rotate: false,
-                slideShadows: false,
-                perSlideOffset: 10,
-            },
+            modules: [Navigation, Pagination],//, EffectCards],
+            // effect: "cards",
+            // cardsEffect: {
+            //     rotate: false,
+            //     slideShadows: false,
+            //     perSlideOffset: 10,
+            // },
+            spaceBetween: 32,
             pagination: {
                 el: ".popular-tickets__card-slider-pagination",
                 bulletClass: "popular-tickets__card-slider-pagination-bullet",

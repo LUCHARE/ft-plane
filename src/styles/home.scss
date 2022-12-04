@@ -41,7 +41,7 @@
         left: 50%;
         top: 25%;
 
-        width: 100%;
+        width: 90%;
 
         transform: translateX(-50%);
         z-index: 1;
@@ -328,13 +328,13 @@
 
     }
 
-    &__ticket.swiper-slide {
-        opacity: 0.1;
-    }
+    // &__ticket.swiper-slide {
+    //     opacity: 0.1;
+    // }
 
-    &__ticket.swiper-slide-visible {
-        opacity: 1;
-    }
+    // &__ticket.swiper-slide-visible {
+    //     opacity: 1;
+    // }
 
     &__slider-container {
         grid-area: slider;
@@ -359,7 +359,10 @@
     &__card-slider-controls {
         grid-area: controls;
 
+        position: relative;
+
         display: grid;
+        justify-items: center;
         grid-template-areas:
             "pagination"
             "spacing"
@@ -367,10 +370,6 @@
             "next";
         grid-template-rows: auto 1fr auto auto;
         margin-left: 40px;
-    }
-
-    &__card-slider-pagination {
-        grid-area: pagination;
     }
 
     &__card-slider-pagination-bullet,
@@ -393,25 +392,34 @@
     }
 
     &__card-slider-pagination {
+        grid-area: pagination;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         gap: 8px;
     }
 
+    &__dashed-line {
+        grid-area: spacing;
+        align-self: center;
+
+        width: 0px;
+        height: 30%;
+
+        border-right: 2px dashed rgba(255, 255, 255, 0.2);;
+    }
+
     &__card-slider-next {
         grid-area: next;
-    }
-
-    &__card-slider-prev {
-        grid-area: prev;
-    }
-
-    &__card-slider-next {
+        
         background-color: #313ef7;
         box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
     }
 
     &__card-slider-prev {
+        grid-area: prev;
+        
         margin-bottom: 11px;
 
         background-color: rgba(255, 255, 255, 0.1);
@@ -459,6 +467,10 @@
 
         &__card-slider-pagination {
             flex-direction: row;
+        }
+
+        &__dashed-line {
+            display: none;
         }
 
         &__card-slider-prev {
@@ -567,6 +579,8 @@
 
     &__illustration {
         grid-area: illustration;
+   
+        position: relative;
     }
 
     &__illustration-image {
@@ -574,6 +588,19 @@
         width: 100%;
 
         // filter: brightness(95%);
+    }
+
+    &__illustration-user {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        max-width: 50px;
+
+        border: 3px solid #fff;
+        border-radius: 50%;
+
+        cursor: pointer;
     }
 
     &__slider {
