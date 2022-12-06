@@ -59,6 +59,6 @@ module.exports = {
                 "popular-tickets": require("./data/popular-tickets.json"),
             },
         }),
-        new CSSExtractPlugin(),
+        new CSSExtractPlugin({ filename: "styles/index.css" }),
     ],
 };
