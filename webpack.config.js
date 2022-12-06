@@ -37,6 +37,7 @@ module.exports = {
                 ],
             },
             { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+            { test: /\.hbs$/, loader: "handlebars-loader" },
         ],
     },
 
@@ -49,7 +50,14 @@ module.exports = {
             patterns: [{ from: "./src/images", to: "images" }],
         }),
         new HtmlPlugin({
-            template: "./src/markup/index.html",
+            template: "./src/markup/index.hbs",
+            templateParameters: {
+                "features": require("./data/features.json"),
+                "best-travelers": require("./data/best-travelers.json"),
+                "feedback": require("./data/feedback.json"),
+                "memories": require("./data/memories.json"),
+                "popular-tickets": require("./data/popular-tickets.json"),
+            },
         }),
         new CSSExtractPlugin(),
     ],

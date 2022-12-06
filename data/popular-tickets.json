@@ -1,0 +1,67 @@
+[
+    {
+        "label": "Economy saver",
+        "from": "UK",
+        "to": "BD",
+        "count": "6 flight tickets",
+        "passenger": "Raju Mullah",
+        "data": "20 Nov 2022",
+        "flightNum": "#5486626661",
+        "gate": "20 A",
+        "class": "Economy", 
+        "seats": "5B - 11B",
+        "barcode": "images/barcode.svg"
+    },
+    {
+        "label": "Economy saver",
+        "from": "UK",
+        "to": "BD",
+        "count": "6 flight tickets",
+        "passenger": "Zaire Vetrovs",
+        "data": "20 Nov 2022",
+        "flightNum": "#5486626662",
+        "gate": "20 A",
+        "class": "Economy", 
+        "seats": "5B - 11B",
+        "barcode": "images/barcode.svg"
+    },
+    {
+        "label": "Economy saver",
+        "from": "UK",
+        "to": "BD",
+        "count": "6 flight tickets",
+        "passenger": "Marcus Dias",
+        "data": "20 Nov 2022",
+        "flightNum": "#5486626663",
+        "gate": "20 A",
+        "class": "Economy", 
+        "seats": "5B - 11B",
+        "barcode": "images/barcode.svg"
+    },
+    {
+        "label": "Economy saver",
+        "from": "UK",
+        "to": "BD",
+        "count": "6 flight tickets",
+        "passenger": "Davis Schleifer",
+        "data": "20 Nov 2022",
+        "flightNum": "#5486626664",
+        "gate": "20 A",
+        "class": "Economy", 
+        "seats": "5B - 11B",
+        "barcode": "images/barcode.svg"
+    },
+    {
+        "label": "Economy saver",
+        "from": "UK",
+        "to": "BD",
+        "count": "6 flight tickets",
+        "passenger": "Jaylon Vaccaro",
+        "data": "20 Nov 2022",
+        "flightNum": "#5486626661",
+        "gate": "20 A",
+        "class": "Economy", 
+        "seats": "5B - 11B",
+        "barcode": "images/barcode.svg"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "avatar": "images/avatar-5.png",
+        "name": "Jaylon Vaccaro",
+        "rate": "5",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+        "id": 2,
+        "avatar": "images/avatar-1.png",
+        "name": "Zaire Vetrovs",
+        "rate": "4",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+        "id": 3,
+        "avatar": "images/avatar-2.png",
+        "name": "Raju Mullah",
+        "rate": "3",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+        "id": 4,
+        "avatar": "images/avatar-3.png",
+        "name": "Marcus Dias",
+        "rate": "2",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    },
+    {
+        "id": 5,
+        "avatar": "images/avatar-4.png",
+        "name": "Davis Schleifer",
+        "rate": "1",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don"
+    }
+]

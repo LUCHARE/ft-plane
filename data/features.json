@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "images/icons/guide.svg",
+        "title": "Best guide",
+        "text": "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna.",
+        "link": "#"
+    }, 
+    {
+        "icon": "images/icons/discount.svg",
+        "title": "More discount",
+        "text": "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna.",
+        "link": "#"
+    },
+    {
+        "icon": "images/icons/lock.svg",
+        "title": "Private",
+        "text": "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna.",
+        "link": "#"
+    }, 
+    {
+        "icon": "images/icons/headset.svg",
+        "title": "Online support",
+        "text": "Suspendisse ultrices nibh non cursus sagittis. Morbi dictum consequat ex, quis finibus magna.",
+        "link": "#"
+    }
+]

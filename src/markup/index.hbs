@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css"
+        integrity="sha512-okkLcBJE+U19Dpd0QdHA1wn4YY6rW3CwaxeLJT3Jmj9ZcNSbln/VYw8UdqXRIwLX7J8PmtHs0I/FPAhozFvXKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>FT Plane</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        {{> partials/header}}
+        <main class="content">
+            <section class="hero">
+                <div class="hero__container container">
+                    <div class="hero__inner">
+                        <div class="hero__illustration">
+                            <img src="images/hero.png" alt="hero" class="hero__illustration-jet">
+                            <img src="images/aviation.png" alt="aviation" class="hero__illustration-text">
+                        </div>
+
+                        <h2 class="hero__heading">Travel around the&nbsp;world</h2>
+                        <p class="hero__text">One of the advantages of being disorganized is that one is always having
+                            surprising discoveries</p>
+                        <img src="images/map.svg" alt="map" class="hero__background">
+                    </div>
+                </div>
+            </section>
+            <section class="book">
+                <div class="book__container container">
+                    <div class="book__inner">
+                        <form action="#" class="book__form">
+                            <div class="book__form-classes">
+                                <label class="book__form-class" for="classEco">
+                                    <input class="book__form-class-input" type="radio" name="classsel" id="classEco">
+                                    <span class="book__form-class-text">Economy</span>
+                                </label>
+                                <label class="book__form-class" for="classBus">
+                                    <input class="book__form-class-input" type="radio" name="classsel" id="classBus">
+                                    <span class="book__form-class-text">Business</span>
+                                </label>
+                                <label class="book__form-class" for="classFir">
+                                    <input class="book__form-class-input" type="radio" name="classsel" id="classFir">
+                                    <span class="book__form-class-text">First</span>
+                                </label>
+                            </div>
+                            <div class="book__form-main">
+                                <div class="book__form-buttons">
+                                    <button class="book__form-button">
+                                        <div class="book__form-button-icon">
+                                            <img src="images/icons/location.svg" alt="location icon"
+                                                class="book__form-button-icon-image">
+                                        </div>
+                                        <p class="book__form-button-title">Location</p>
+                                        <p class="book__form-button-desc">Where are you going?</p>
+                                    </button>
+                                    <button class="book__form-button">
+                                        <div class="book__form-button-icon">
+                                            <img src="images/icons/user.svg" alt="user icon"
+                                                class="book__form-button-icon-image">
+                                        </div>
+                                        <p class="book__form-button-title">Travelers</p>
+                                        <p class="book__form-button-desc">Add guest</p>
+                                    </button>
+                                    <button class="book__form-button">
+                                        <div class="book__form-button-icon">
+                                            <img src="images/icons/calendar.svg" alt="calendar icon"
+                                                class="book__form-button-icon-image">
+                                        </div>
+                                        <p class="book__form-button-title">Check-in</p>
+                                        <p class="book__form-button-desc">Add date</p>
+                                    </button>
+                                    <button class="book__form-button">
+                                        <div class="book__form-button-icon">
+                                            <img src="images/icons/calendar.svg" alt="calendar icon"
+                                                class="book__form-button-icon-image">
+                                        </div>
+                                        <p class="book__form-button-title">Check-out</p>
+                                        <p class="book__form-button-desc">Add date</p>
+                                    </button>
+                                </div>
+                                <button class="book__form-submit button button_size_l button_bluefield">Book</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="features">
+                <div class="features__container container">
+                    <div class="features__inner">
+                        <h3 class="features__heading heading heading_size_l">Our features</h3>
+                        <ul class="features__list">
+                            {{#each features}}
+                            <li class="features__list-item">
+                                <a href="{{this.link}}" class="features__card">
+                                    <div class="features__card-icon">
+                                        <img src="{{this.icon}}" alt="guide" class="features__card-icon-image">
+                                    </div>
+                                    <h5 class="features__card-title">{{this.title}}</h5>
+                                    <p class="features__card-text">{{this.text}}</p>
+                                    <button class="features__card-button">
+                                        <img src="images/icons/arrow.svg" alt="arrow"
+                                            class="features__card-button-arrow">
+                                    </button>
+                                </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="lets-fly">
+                <div class="lets-fly__container container">
+                    <div class="lets-fly__inner">
+                        <div class="lets-fly__illustration">
+                            <img src="images/lets-fly.png" alt="" class="lets-fly__illustration-image">
+                        </div>
+                        <div class="lets-fly__main">
+                            <h2 class="lets-fly__heading">
+                                Let’s&nbsp;fly
+                                <span class="lets-fly__heading-line"></span>
+                            </h2>
+                            <p class="lets-fly__big-text">It’s one of the leading online flight booking platforms in the
+                                world</p>
+                            <ul class="lets-fly__list">
+                                <li class="lets-fly__list-item">
+                                    <p class="lets-fly__text">Contrary to popular belief, Lorem Ipsum is not simply
+                                        random text</p>
+                                </li>
+                                <li class="lets-fly__list-item">
+                                    <p class="lets-fly__text">If you are going to use a passage of Lorem Ipsum</p>
+                                </li>
+                                <li class="lets-fly__list-item">
+                                    <p class="lets-fly__text">Lorem Ipsum is therefore always free from repetition,
+                                        injected humour, or non-characteristic words etc.</p>
+                                </li>
+                                <li class="lets-fly__list-item">
+                                    <p class="lets-fly__text">It is a long established fact that a reader will be
+                                        distracted by the readable content of a page when looking at its layout.</p>
+                                </li>
+                            </ul>
+                            <a href="" class="lets-fly__button button button_size_l button_bluefield">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="popular-tickets">
+                <div class="popular-tickets__container container">
+                    <div class="popular-tickets__inner">
+                        <h2 class="popular-tickets__heading">Book Popular Flight&nbsp;Tickets</h2>
+                        <p class="popular-tickets__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's</p>
+                        <div class="popular-tickets__illustration">
+                            <img src="images/air-delivery.png" alt="air delivery"
+                                class="popular-tickets__illustration-image">
+                        </div>
+                        <div class="popular-tickets__slider-container">
+                            <div class="popular-tickets__card-slider swiper">
+                                <div class="swiper-wrapper">
+                                    {{#each popular-tickets}}
+                                    <a href="#" class="popular-tickets__ticket ticket swiper-slide">
+                                        <div class="ticket__header">
+                                            <p class="ticket__class-label">{{this.label}}</p>
+                                            <p class="ticket__fromto">
+                                                <span class="ticket__from">{{this.from}}</span>
+                                                <img src="images/icons/boeing.svg" alt="boeing" class="ticket__boeing">
+                                                <span class="ticket__to">{{this.to}}</span>
+                                            </p>
+                                        </div>
+                                        <p class="ticket__count">{{this.count}}</p>
+                                        <div class="ticket__data">
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Passenger</span>
+                                                <span class="ticket__data-contents">{{this.passenger}}</span>
+                                            </p>
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Date</span>
+                                                <span class="ticket__data-contents">{{this.date}}</span>
+                                            </p>
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Flight</span>
+                                                <span class="ticket__data-contents">{{this.flightNum}}</span>
+                                            </p>
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Gate</span>
+                                                <span class="ticket__data-contents">{{this.gate}}</span>
+                                            </p>
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Class</span>
+                                                <span class="ticket__data-contents">{{this.class}}</span>
+                                            </p>
+                                            <p class="ticket__data-item">
+                                                <span class="ticket__data-label">Seats</span>
+                                                <span class="ticket__data-contents">{{this.seats}}</span>
+                                            </p>
+                                        </div>
+                                        <img src="{{this.barcode}}" alt="barcode" class="ticket__barcode">
+                                    </a>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popular-tickets__card-slider-controls">
+                            <div class="popular-tickets__card-slider-pagination"></div>
+                            <div class="popular-tickets__dashed-line"></div>
+                            <button class="popular-tickets__card-slider-prev">
+                                <img src="images/icons/chev-left.svg" alt="previous slide"
+                                    class="popular-tickets__card-slider-prev-image">
+                            </button>
+                            <button class="popular-tickets__card-slider-next">
+                                <img src="images/icons/chev-right.svg" alt="next slide"
+                                    class="popular-tickets__card-slide-next-image">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="best-travelers">
+                <div class="best-travelers__container container">
+                    <div class="best-travelers__inner">
+                        <h2 class="best-travelers__heading heading heading_size_l">Best&nbsp;travelars&nbsp;of
+                            this&nbsp;month</h2>
+                        <ul class="best-travelers__list">
+                            {{#each best-travelers}}
+                            <li class="best-travelers__list-item">
+                                <a href="#" class="best-travelers__card">
+                                    <img src="{{this.background}}" alt="background" class="best-travelers__card-bg">
+                                    <img src="{{this.avatar}}" alt="traveler avatar"
+                                        class="best-travelers__card-avatar">
+                                    <p class="best-travelers__card-name">{{this.name}}</p>
+                                    <p class="best-travelers__card-username">{{this.username}}</p>
+                                </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="feedback">
+                <div class="feedback__container container">
+                    <div class="feedback__inner">
+                        <p class="feedback__description">What’s our customer saying</p>
+                        <h2 class="feedback__heading heading heading_size_l">Our&nbsp;Customer Feedback</h2>
+                        <div class="feedback__illustration">
+                            {{#each feedback}}
+                            <img src="{{this.avatar}}" alt="user-avatar"
+                                class="feedback__illustration-user js-feedback-user" data-card-id="{{this.id}}">
+                            {{/each}}
+                            <img src="images/feedback-map.svg" alt="feedback map"
+                                class="feedback__illustration-image js-feedback-map">
+                        </div>
+                        <div class="feedback__slider swiper">
+                            <div class="feedback__slider-wrapper swiper-wrapper">
+                                {{#each feedback}}
+                                <div class="feedback__card swiper-slide" data-id="{{this.id}}">
+                                    <a href="#" class="feedback__card-user">
+                                        <img src="{{this.avatar}}" alt="user avatar" class="feedback__card-user-avatar">
+                                        <p class="feedback__card-user-name">{{this.name}}</p>
+                                        <div class="feedback__card-user-rate rating js-rating"
+                                            data-stars="{{this.rate}}">
+                                        </div>
+                                    </a>
+                                    <p class="feedback__card-text">{{this.text}}</p>
+                                </div>
+                                {{/each}}
+                            </div>
+                            <button class="feedback__slider-prev"><img src="images/icons/chev-left2.svg"
+                                    alt="previous slide" class="feedback__slide-prev-image"></button>
+                            <button class="feedback__slider-next"><img src="images/icons/chev-right.svg"
+                                    alt="next slide" class="feedback__slide-next-image"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="make-memories">
+                <div class="make-memories__container container">
+                    <div class="make-memories__inner">
+                        <h2 class="make-memories__heading heading heading_size_l">Make&nbsp;memories with&nbsp;us</h2>
+                        <ul class="make-memories__list">
+                            {{#each memories}}
+                            <li class="make-memories__list-item">
+                                <a href="#" class="make-memories__card" style="--bg: url(./../{{this.background}})"></a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container container">
+                    <div class="subscribe__inner">
+                        <h2 class="subscribe__heading heading heading_size_l">Subscribe Newsletter get letest news</h2>
+                        <form action="#" class="subscribe__form">
+                            <input type="email" class="subscribe__form-input" placeholder="Enter your email address">
+                            <button type="submit"
+                                class="subscribe__form-submit button button_size_m button_bluefield">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {{> partials/footer}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"
+        integrity="sha512-wdUM0BxMyMC/Yem1RWDiIiXA6ssXMoxypihVEwxDc+ftznGeRu4s9Fmxl8PthpxOh5CQ0eqjqw1Q8ScgNA1moQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

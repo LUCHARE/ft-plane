@@ -1,0 +1,26 @@
+[
+    {
+        "avatar": "images/avatar-2.png",
+        "background": "images/card-bg-2.png",
+        "name": "Raju Mullah",
+        "username": "@rajumulllah"
+    },
+    {
+        "avatar": "images/avatar-1.png",
+        "background": "images/card-bg-1.png",
+        "name": "Zaire Vetrovs",
+        "username": "@zairevetrovs"
+    },
+    {
+        "avatar": "images/avatar-3.png",
+        "background": "images/card-bg-3.png",
+        "name": "Marcus Dias",
+        "username": "@marcusdias"
+    },
+    {
+        "avatar": "images/avatar-4.png",
+        "background": "images/card-bg-4.png",
+        "name": "Davis Schleifer",
+        "username": "@davisschleifer"
+    }
+]
