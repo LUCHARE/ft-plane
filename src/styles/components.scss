@@ -19,6 +19,8 @@
     @include Montserrat(16px, 600, #fff);
 
     transition: transform 0.2s ease-in-out;
+    
+    cursor: pointer;
 
     &:hover {
         transform: scale(0.95);
