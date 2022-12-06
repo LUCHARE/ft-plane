@@ -148,6 +148,14 @@
         }
 
     }
+ 
+    &__form-class_active {
+        background-color: #313ef7;
+
+        .book__form-class-text {
+            color: #fff;
+        }
+    }
 
     &__form-class-input {
         display: none;
@@ -164,8 +172,6 @@
                              "icon desc";
         grid-template-columns: auto 1fr;
         grid-template-rows: 1fr 1fr;
-
-        cursor: pointer;
     }
 
     &__form-button-icon {

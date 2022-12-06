@@ -35,24 +35,24 @@
             <section class="book">
                 <div class="book__container container">
                     <div class="book__inner">
-                        <form action="#" class="book__form">
+                        <form action="/" class="book__form js-book-form">
                             <div class="book__form-classes">
-                                <label class="book__form-class" for="classEco">
-                                    <input class="book__form-class-input" type="radio" name="classsel" id="classEco">
+                                <label class="book__form-class js-book-class" for="classEco">
+                                    <input class="book__form-class-input" value="economy" type="radio" name="class" id="classEco" checked>
                                     <span class="book__form-class-text">Economy</span>
                                 </label>
-                                <label class="book__form-class" for="classBus">
-                                    <input class="book__form-class-input" type="radio" name="classsel" id="classBus">
+                                <label class="book__form-class js-book-class" for="classBus">
+                                    <input class="book__form-class-input" value="business" type="radio" name="class" id="classBus">
                                     <span class="book__form-class-text">Business</span>
                                 </label>
-                                <label class="book__form-class" for="classFir">
-                                    <input class="book__form-class-input" type="radio" name="classsel" id="classFir">
+                                <label class="book__form-class js-book-class" for="classFir">
+                                    <input class="book__form-class-input" value="first" type="radio" name="class" id="classFir">
                                     <span class="book__form-class-text">First</span>
                                 </label>
                             </div>
                             <div class="book__form-main">
                                 <div class="book__form-buttons">
-                                    <button class="book__form-button">
+                                    <button class="book__form-button js-book-form-button">
                                         <div class="book__form-button-icon">
                                             <img src="images/icons/location.svg" alt="location icon"
                                                 class="book__form-button-icon-image">
@@ -60,15 +60,16 @@
                                         <p class="book__form-button-title">Location</p>
                                         <p class="book__form-button-desc">Where are you going?</p>
                                     </button>
-                                    <button class="book__form-button">
+                                    <button class="book__form-button js-book-form-button">
                                         <div class="book__form-button-icon">
                                             <img src="images/icons/user.svg" alt="user icon"
                                                 class="book__form-button-icon-image">
                                         </div>
                                         <p class="book__form-button-title">Travelers</p>
                                         <p class="book__form-button-desc">Add guest</p>
+                                        
                                     </button>
-                                    <button class="book__form-button">
+                                    <button class="book__form-button js-book-form-button">
                                         <div class="book__form-button-icon">
                                             <img src="images/icons/calendar.svg" alt="calendar icon"
                                                 class="book__form-button-icon-image">
@@ -76,7 +77,7 @@
                                         <p class="book__form-button-title">Check-in</p>
                                         <p class="book__form-button-desc">Add date</p>
                                     </button>
-                                    <button class="book__form-button">
+                                    <button class="book__form-button js-book-form-button">
                                         <div class="book__form-button-icon">
                                             <img src="images/icons/calendar.svg" alt="calendar icon"
                                                 class="book__form-button-icon-image">
@@ -296,7 +297,7 @@
                 <div class="subscribe__container container">
                     <div class="subscribe__inner">
                         <h2 class="subscribe__heading heading heading_size_l">Subscribe Newsletter get letest news</h2>
-                        <form action="#" class="subscribe__form">
+                        <form action="/" class="subscribe__form">
                             <input type="email" class="subscribe__form-input" placeholder="Enter your email address">
                             <button type="submit"
                                 class="subscribe__form-submit button button_size_m button_bluefield">Subscribe</button>
